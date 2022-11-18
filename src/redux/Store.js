@@ -17,4 +17,4 @@ const Store = configureStore({
 
 export default Store;
 
-export const server = "https://pijja-api.onrender.com";
+export const server = "https://pijja-api.onrender.com/api";
