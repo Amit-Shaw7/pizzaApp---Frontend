@@ -32,9 +32,7 @@ export const CartReducer = createReducer(initialState, {
     },
 
     INCREMENT_QTY: (state, action) => {
-        // console.log(action.payload)
-        // console.log(state.cartItems[0].productId);
-        for (let i = 0; i < state.cartItems.length; i++) {
+        for (let i = 0; i < state.cartItems?.length; i++) {
             if (state.cartItems[i].productId === action.payload) {
                 // console.log(state.cartItems[i].productId);
                 state.cartItems[i].qty += 1;

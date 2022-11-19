@@ -125,22 +125,28 @@ export const fetchAllProuctsList = () => async (dispatch) => {
     }
 }
 
-export const fetchCurrentProduct = (id) => async (dispatch) => {
+export const fetchCurrentProduct = (id, from) => async (dispatch) => {
     try {
         dispatch({ type: "LOADING_TRUE" });
 
         const url = `${server}/admin/product/find/${id}`;
         const res = await axios.get(url, { withCredentials: true });
         if (res.status === 200) {
-            dispatch({ type: "LOADING_FALSE", payload: res.data.product });
+            if (from !== "cart") {
+                dispatch({ type: "LOADING_FALSE", payload: res.data.product });
+            }
             return res.data.product;
         } else {
-            dispatch({ type: "LOADING_FALSE" });
+            if (from !== "cart") {
+                dispatch({ type: "LOADING_FALSE" });
+            }
             dispatch({ type: "SET_ERROR", payload: res.data.msg });
         }
 
     } catch (error) {
-        dispatch({ type: "LOADING_FALSE" });
+        if (from !== "cart") {
+            dispatch({ type: "LOADING_FALSE" });
+        }
         dispatch({ type: "SET_ERROR", payload: error.response.data.msg });
     }
 }
