@@ -1,6 +1,7 @@
 import { server } from "../Store";
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
+axios.defaults.withCredentials = true;
 
 export const fetchStats = () => async (dispatch) => {
     try {

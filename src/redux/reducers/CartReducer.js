@@ -4,7 +4,7 @@ const initialState = {
     loading: false,
     message: null,
     error: null,
-    cartItems: [],
+    cartItems: null,
     subTotal: 0,
     refresh: false,
     tax: 0,

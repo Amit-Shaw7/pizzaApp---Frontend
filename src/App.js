@@ -45,7 +45,7 @@ function App() {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/about" element={<About />} />
 
-        <Route exact path="/cart" element={isAuthenticated ? <Cart /> : <Login type="LOGIN"/>} />
+        <Route exact path="/cart" element={isAuthenticated ? <Cart /> : <Login type="login"/>} />
         <Route exact path="/shipping" element={isAuthenticated ? <Shipping /> : <Login />} />
         <Route exact path="/payment" element={isAuthenticated ? <PaymentPage /> : <Login />} />
         <Route exact path="/confirm" element={isAuthenticated ? <OrderConfirmedPage /> : <Login />} />

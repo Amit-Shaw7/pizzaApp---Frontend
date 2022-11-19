@@ -42,7 +42,7 @@ const Cart = () => {
 
                         {
 
-                            cartItems?.length === 0
+                           cartItems && cartItems?.length === 0
                                 ?
                                 <div className='empty'>
                                     <div>

@@ -1,5 +1,6 @@
 import { server } from '../Store';
 import axios from 'axios';
+axios.defaults.withCredentials = true;
 
 export const submitForm = (email, name, message) => async (dispatch) => {
     try {

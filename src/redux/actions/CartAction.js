@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { server } from '../Store';
+axios.defaults.withCredentials = true;
 
 
 export const getCartItemCount = () => async (dispatch) => {

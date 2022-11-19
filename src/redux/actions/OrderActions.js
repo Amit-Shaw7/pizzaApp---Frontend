@@ -1,6 +1,7 @@
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { server } from '../Store';
+axios.defaults.withCredentials = true;
 
 export const createCODOrder = (dataToSend) => async (dispatch) => {
     try {

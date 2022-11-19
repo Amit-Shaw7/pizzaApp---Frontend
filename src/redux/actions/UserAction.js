@@ -2,6 +2,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import { server } from '../Store';
 import { getCartItemCount } from './CartAction';
+axios.defaults.withCredentials = true;
 
 
 export const loadUser = () => async (dispatch) => {
