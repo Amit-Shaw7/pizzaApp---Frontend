@@ -54,7 +54,7 @@ const Dashboard = () => {
                                 </div>
 
                                 <aside>
-                                    <Doughnut data={data} />
+                                    <Doughnut data={data && data} />
                                 </aside>
                             </section>
 

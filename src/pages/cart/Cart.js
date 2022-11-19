@@ -76,7 +76,7 @@ const Cart = () => {
                                             <p><BiRupee /> {Math.round(subTotal + subTotal * 0.18 + shippingCharges)}</p>
                                         </div>
                                         {
-                                            cartItems.length !== 0 && <Link to="/shipping">Checkout <BsFillArrowRightCircleFill style={{ marginLeft: "5px" }} /></Link>
+                                            cartItems?.length !== 0 && <Link to="/shipping">Checkout <BsFillArrowRightCircleFill style={{ marginLeft: "5px" }} /></Link>
                                         }
                                     </article>
                                 </main>
