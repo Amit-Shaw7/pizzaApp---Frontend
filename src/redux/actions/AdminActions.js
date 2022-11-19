@@ -16,7 +16,7 @@ export const fetchStats = () => async (dispatch) => {
             dispatch({ type: "FETCH_STATS_FAILURE", paylaod: res.data.msg });
         }
     } catch (error) {
-        dispatch({ type: "FETCH_STATS_FAILURE", paylaod: error.response.data.msg });
+        dispatch({ type: "FETCH_STATS_FAILURE", paylaod: error.response?.data?.msg });
     }
 }
 
