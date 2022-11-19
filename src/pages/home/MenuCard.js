@@ -1,6 +1,6 @@
 import React from 'react';
 import { BiRupee } from 'react-icons/bi';
-import pizza3 from "../../assets/chilli-sausage-pizza.png";
+import noimage from "../../assets/noimage.png";
 import { server } from '../../redux/Store';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -38,7 +38,7 @@ const MenuCard = ({ product, idx }) => {
         <div className='menu-card'>
             <div>Pijja-{idx + 1}</div>
             <main>
-                <img src={product?.photoUrl === "nourl" ? pizza3 : product?.photoUrl} alt={idx + 1} />
+                <img src={product?.photoUrl === "nourl" ? noimage : product?.photoUrl} alt={idx + 1} />
                 <p>{product?.title}</p>
                 <h5><BiRupee />{product.price}</h5>
                 <button onClick={addToCart}>ADD TO CART</button>

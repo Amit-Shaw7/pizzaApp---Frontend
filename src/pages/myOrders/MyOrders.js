@@ -35,7 +35,7 @@ const MyOrders = () => {
   return (
     <section className="table">
       {
-        orders.length === 0
+        orders?.length === 0
           ?
           <div className='empty'>
             <div>

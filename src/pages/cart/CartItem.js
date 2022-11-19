@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { BiRupee } from 'react-icons/bi';
 import { useDispatch, useSelector } from 'react-redux';
 import { RiDeleteBin6Line } from 'react-icons/ri'
-import pizza1 from "../../assets/mixed-veg-pizza.png";
 import { deleteAItem } from '../../redux/actions/CartAction';
 import Loader from '../../layout/Loader';
 
@@ -48,7 +47,7 @@ const CartItem = ({ item }) => {
           :
           <div className='cart-item' >
             <div>
-              <img src={pizza1} alt="Cheese Pizza" />
+              <img src={item?.photoUrl} alt="Cheese Pizza" />
               <h5>{item?.title}</h5>
               <h4 style={{ display: "flex", alignItems: "center", justifyContent: "center" }}><BiRupee /> {item?.price}</h4>
             </div>

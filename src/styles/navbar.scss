@@ -13,12 +13,13 @@ nav {
         display: flex;
         align-items: center;
 
-        // >a {
-        //     >svg {
-        //         color: $yellow;
-        //         font-size: 3rem;
-        //     }
-        // }
+        >a {
+            >img {
+                height: 4rem;
+                width: 4rem;
+                object-fit: contain;
+            }
+        }
 
         a {
             margin: 0 2rem;

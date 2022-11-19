@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { IoPizza } from "react-icons/io5"
 import { Link } from 'react-router-dom';
 import { FiShoppingCart, FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 import { motion } from 'framer-motion';
 import { useSelector } from 'react-redux';
 import '../styles/navbar.scss';
+import logo from '../assets/logo.png';
 
 const Navbar = ({ isAuthenticated }) => {
   const { cartItemsCount } = useSelector(state => state.cart);
@@ -16,7 +16,7 @@ const Navbar = ({ isAuthenticated }) => {
         initial={{ x: "-100%" }}
         whileInView={{ x: "0" }}
       >
-       <Link to="/"> <IoPizza style={{fontSize:"3rem"}}/></Link>
+       <Link to="/"> <img src={logo} alt="Pijja Logo"/></Link>
       </motion.div>
       <div>
         <Link style={{ color: `${selected === 'home' ? "#fc8019" : "black"}` }} onClick={() => setSelected("home")} to="/">Home</Link>
